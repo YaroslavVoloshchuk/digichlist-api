@@ -1,4 +1,4 @@
-FROM node:14.15.4
+FROM node:14.16-alpine
 
 RUN mkdir -p /usr/src/app
 
@@ -10,8 +10,7 @@ RUN npm install
 
 COPY . .
 
-ARG port=5000
+EXPOSE 5000
 
-EXPOSE $port
+CMD ["node", "server.js"]
 
-CMD ["npm", "start"]
