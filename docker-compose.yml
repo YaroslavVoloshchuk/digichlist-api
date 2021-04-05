@@ -7,9 +7,8 @@ services:
     build: .
     ports:
       - '80:5000'
-    environment:
-      - NODE_ENV=production
-      - PORT=5000
-      - MONGO_URI=mongodb://username:password@docdb-2021-04-02-21-51-53.ckcyrr90b8e5.us-east-1.docdb.amazonaws.com:27017/app?retryWrites=false
-      - JWT=text
+    env_file:
+      - .env
+
+   
 
