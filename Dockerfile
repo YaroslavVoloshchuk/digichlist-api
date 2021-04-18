@@ -10,7 +10,7 @@ RUN npm install
 
 ARG NODE_ENV=production
 
-ENV NODE_ENV ="${NODE_ENV}"
+ENV NODE_ENV="${NODE_ENV}"
 
 ARG PORT=5000
 
